@@ -58,7 +58,7 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 	closedir(dp);
 	return 0;
 }
-/*
+
 static int xmp_read(const char *path, char *buf, size_t size, off_t offset,
 		    struct fuse_file_info *fi)
 {
@@ -86,9 +86,6 @@ static int xmp_read(const char *path, char *buf, size_t size, off_t offset,
 	return res;
 }
 
-*/
-/*
-
 static int xmp_mkdir(const char *path, mode_t mode)
 {
     int res;
@@ -100,7 +97,6 @@ static int xmp_mkdir(const char *path, mode_t mode)
     return 0;
 }
 
-*/
 static struct fuse_operations xmp_oper = {
 	.getattr  	= xmp_getattr,
 	.readdir	= xmp_readdir,
